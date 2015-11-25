@@ -142,7 +142,7 @@ var boardOne = function(playerId, playerNum) {
   console.log(currentBoardArray);
 
   var startBoard = function(player) {
-    var newArray = numbers;
+    var newArray = numbers.shuffle();
     console.log($(player + " td"));
     $(player + " td").each(function(i){
         $(this).text(newArray[i]);
