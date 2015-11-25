@@ -23,6 +23,8 @@ $(document).ready(function() {
       $("#twoPlayer").hide();
       $("#onePlayer").hide();
       $("#image").hide();
+      $("#text").hide();
+      $("#text2").hide();
 
     })
 
@@ -36,6 +38,8 @@ $(document).ready(function() {
       $("#twoPlayer").hide();
       $("#textBox").html("<h1>Player 1</h1>");
       $("#image").hide();
+      $("#text").hide();
+      $("#text2").hide();
 
     })
        		
