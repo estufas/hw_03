@@ -3,15 +3,15 @@ $(document).ready(function() {
     $("#playerTbl1").hide();
     $("#playerTbl2").hide();
 
-    $("#refreshButton").on( "click", function(e) {
-        e.preventDefault();
-        player1['moves'] = 0;
-        player2['moves'] = 0;
-        boardCmpleted = 0;
-        startBoard("#playerTbl1");
-        startBoard("#playerTbl2");
-        boardOne("#playerTbl1", 1);
-        boardOne("#playerTbl2", 2);
+    $("#refreshButton").on( "click", function() {
+            e.preventDefault();
+            player1['moves'] = 0;
+            player2['moves'] = 0;
+            boardCmpleted = 0;
+            startBoard("#playerTbl1");
+            startBoard("#playerTbl2");
+            boardOne("#playerTbl1", 1);
+            boardOne("#playerTbl2", 2);
     })
 
     $("#onePlayer").on( "click", function(e) {
@@ -54,15 +54,15 @@ var player2 = {
 
 // var singlePlayer = true;
 
-var showRefresh = function() {
-  if((boardCmpleted === 1) && (singlePlayer === true)) {
-    $("#refresh").show();
-  } else if ((boardCmpleted === 2) && (singlePlayer === false)) {
-    $("#refresh").show();
-  } else {
-    $("#refresh").hide();
-  }
-}
+// var showRefresh = function() {
+//   if((boardCmpleted === 1) && (singlePlayer === true)) {
+//     $("#refresh").show();
+//   } else if ((boardCmpleted === 2) && (singlePlayer === false)) {
+//     $("#refresh").show();
+//   } else {
+//     $("#refresh").hide();
+//   }
+// }
 
 var secondPlayerTurn = function() {
   $("#playerTbl1").hide();
@@ -142,7 +142,7 @@ var boardOne = function(playerId, playerNum) {
   console.log(currentBoardArray);
 
   var startBoard = function(player) {
-    var newArray = numbers.shuffle();
+    var newArray = numbers;
     console.log($(player + " td"));
     $(player + " td").each(function(i){
         $(this).text(newArray[i]);
@@ -181,8 +181,7 @@ var boardOne = function(playerId, playerNum) {
         } else if(boardCmpleted === 1 && singlePlayer === true) {
           $("#textBox").html(' ');
           $("#textBox").html("<h1>completed</h1>");
-          // $("#refresh").show();
-          showRefresh();
+          $("#playerTbl1").hide();
            }
     } else {
         return;
