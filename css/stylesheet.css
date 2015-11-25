@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'itsadzokeS01-046';
+    src: url('../itsadzokeS01-046.otf') format('opentype')
+
+}
+@font-face {
+    font-family: 'itsadzoke-046';
+    src: url('../itsadzoke-046.otf') format('opentype')
+
+}
+
+#playerTbl1, #playerTbl2 {
+	border-collapse:collapse;
+	table-layout:fixed;
+	font:20pt Arial;
+	width: 420px;
+	height: 420px;
+	margin: 0 auto;
+}
+#playerTbl1 td, #playerTbl2 td {
+	cursor:move;
+	border:3px solid red;
+	/*width:100%;
+	height:100%;*/
+	text-align:center;
+	line-height: 101px;
+	font-family: 'itsadzoke-046';
+
+}
+
+#textBox {
+	font-family: 'itsadzokeS01-046';
+	text-align: center;
+	color: #494739;
+}
+
+#image {
+	/*margin: 0 auto;*/
+}
+
